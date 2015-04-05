@@ -1,0 +1,28 @@
+@media all{
+	body{font-family:sans-serif;font-size:1em;line-height:1.5em;color:#000;background:#eed;margin:0;padding:0;text-align:center;}
+}
+@media screen{
+	h1{margin:0;padding:0;}
+	h1{line-height:2.2em;}
+	h1 a{text-decoration:none;color:#000;font-size:2em;padding:1em 0;margin:0 auto 0 auto;display:block;background:#ffc;max-width:600px;border-bottom:solid 1px #eed;}
+	h2 a{font-size:1.2em;padding:0.5em 0;display:block;}
+	.vyber{padding:2em 0;margin:0 auto 0 auto;background:#fff;max-width:600px;border-bottom:solid 1px #eed;}
+	.strankovani{padding:2em 0;margin:0 auto 0 auto;background:#fff;max-width:600px;border-bottom:solid 1px #eed;}
+	h2{text-align:right;padding:0 2em;margin:0;}
+	h3{text-align:left;padding:0 2em;}
+	p{text-align:left;padding:0 3em;}
+	.nav{list-style:none;margin:0;padding:0;}
+	.nav li{display:inline-block;}
+	.nav li a{display:block;margin:0.5em;font-size:1.5em;}
+	.paticka{padding:1em 0;margin:0 auto 0 auto;background:#ffc;max-width:600px;}
+	.rss{padding:0 2em 0 15px;background:url("/img/rss.png") 0 50% no-repeat;}
+	.github{padding:0 0 0 15px;background:url("/img/github.png") 0 50% no-repeat;}
+}
+@media screen and (min-width: 40em){
+	h1 a{text-decoration:none;color:#000;font-size:2em;padding:1em 0;margin:0 auto 0 auto;display:block;background:#ffc url(/img/podium.png) 0.3em 50% no-repeat;max-width:600px;border-bottom:solid 1px #eed;}
+}
+
+@media print{
+	body{font-family:sans-serif;font-size:1em;line-height:1.5em;color:#000;background:#fff;text-align:left;}
+	.paticka,.strankovani{display:none}
+}
