@@ -36,6 +36,6 @@
       <%= yield %>
 	<%= '</div>' unless current_article.nil? %>
     
-<div class="paticka"><% link_to '/feed.xml', {:class => 'rss'} do %>RSS<% end %> <% link_to 'https://github.com/petrkle/vyber-tydne', {:class => 'github'} do %>vyber-tydne</a><% end %></div>
+<div class="paticka"><% link_to '/feed.xml', {:class => 'rss'} do %>RSS<% end %> <% link_to 'https://github.com/petrkle/vyber-tydne', {:class => 'github'} do %>vyber-tydne</a><% end %> <% link_to 'https://twitter.com/vybertydne', {:class => 'twitter'} do %>vybertydne</a><% end %></div>
   </body>
 </html>
