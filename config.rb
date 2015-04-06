@@ -1,5 +1,3 @@
-activate :livereload, :no_swf => true
-
 Time.zone = "Europe/Prague"
 
 activate :blog do |blog|
