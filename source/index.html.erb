@@ -14,15 +14,15 @@ priority: 1
 <% if paginate && num_pages > 1 %>
 <div class="strankovani">
 	<ul class="nav">
+
   <% if prev_page %>
     <li><%= link_to '&laquo; Novější', prev_page %></li>
   <% end %>
-<% end %>
 
-<% if paginate %>
   <% if next_page %>
     <li><%= link_to 'Starší &raquo;', next_page %></li>
-  <% end %>
+	<% end %>
+
 </ul>
 </div>
 <% end %>
