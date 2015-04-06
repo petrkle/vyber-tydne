@@ -4,7 +4,7 @@ layout: false
 
 xml.instruct!
 xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
-  sitemap.resources.select { |page| page.destination_path =~ /\.html/ && !(page.destination_path =~ /404/) }.each do |page|
+  sitemap.resources.select { |page| page.destination_path =~ /\.html/ && !(page.destination_path =~ /(404|google)/) }.each do |page|
     xml.url do
       xml.loc "http://vyber-tydne.kle.cz#{page.url}"
       xml.lastmod Date.today.to_time.iso8601
