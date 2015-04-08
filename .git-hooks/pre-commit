@@ -2,4 +2,16 @@
 
 set -e
 
-middleman build
+LC_ALL=C
+
+for foo in source/*.md
+do
+	DATUM="`basename $foo '-vyber.md'`"
+	if [ "`date -d "$DATUM" +%a`" != "Fri" ]
+	then
+		echo "$DATUM - neni patek"
+		exit 1
+	fi
+done
+
+make
