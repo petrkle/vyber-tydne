@@ -2,4 +2,5 @@ language: ruby
 rvm:
   - 1.9.3
 install: make install
-script: make
+before_script: make test
+script: make web

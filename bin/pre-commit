@@ -1,0 +1,43 @@
+#!/bin/bash
+
+set -e
+
+LC_ALL=C
+
+for foo in source/*.md
+do
+	DATUM="`basename $foo '-vyber.md'`"
+
+	if [ "`date -d "$DATUM" +%a`" != "Fri" ]
+	then
+		echo "$DATUM - neni patek"
+		exit 1
+	fi
+
+	if ! grep --quiet "^title: Výběr$" $foo
+	then
+		echo "$foo nemá title: Výběr"
+		exit 1
+	fi
+
+	if grep --quiet "\[Příklad\]" $foo
+	then
+		echo "$foo obsahuje výchozí text odkazu [Příklad]"
+		exit 1
+	fi
+
+	if grep --quiet "http://example\.cz" $foo
+	then
+		echo "$foo obsahuje odkaz na example.cz"
+		exit 1
+	fi
+
+	if grep --quiet "^Jméno autora$" $foo
+	then
+		echo "$foo obsahuje neupravené Jméno autora"
+		exit 1
+	fi
+
+done
+
+make web

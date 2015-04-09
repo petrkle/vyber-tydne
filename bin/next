@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+SOURCE=source
+SUFFIX="-vyber.md"
+
+LAST=`ls -t ${SOURCE}/*${SUFFIX} | head -1 | sed "s#.*/##;s/\${SUFFIX}$//;"`
+
+cp -vi skel/YYYY-MM-DD${SUFFIX} $SOURCE/`date --date="${LAST} 1 week" +%Y-%m-%d`${SUFFIX}
