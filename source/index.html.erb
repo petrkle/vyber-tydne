@@ -16,11 +16,11 @@ priority: 1
 	<ul class="nav">
 
   <% if prev_page %>
-    <li><%= link_to '&laquo; Novější', prev_page %></li>
+    <li><%= link_to '&laquo; Novější', prev_page, :title => 'Novější výběry'  %></li>
   <% end %>
 
   <% if next_page %>
-    <li><%= link_to 'Starší &raquo;', next_page %></li>
+		<li><%= link_to 'Starší &raquo;', next_page, :title => 'Starší výběry' %></li>
 	<% end %>
 
 </ul>
