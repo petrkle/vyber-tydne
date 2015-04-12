@@ -3,7 +3,7 @@
 Popis
 =====
 
-Týdenní výběr odkazů.
+Týdenní výběr odkazů. Vychází každý pátek.
 
 
 Přidávání odkazů
