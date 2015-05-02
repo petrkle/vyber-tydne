@@ -6,5 +6,8 @@ SOURCE=source
 SUFFIX="-vyber.md"
 
 LAST=`ls -1 ${SOURCE}/*${SUFFIX} | sort -n | tail -1 | sed "s#.*/##;s/\${SUFFIX}$//;"`
+NEXT=`date --date="${LAST} 1 week" +%Y-%m-%d`${SUFFIX}
 
-cp -vi skel/YYYY-MM-DD${SUFFIX} $SOURCE/`date --date="${LAST} 1 week" +%Y-%m-%d`${SUFFIX}
+cp -vi skel/YYYY-MM-DD${SUFFIX} $SOURCE/$NEXT
+
+$EDITOR $SOURCE/$NEXT
