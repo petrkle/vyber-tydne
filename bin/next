@@ -10,4 +10,6 @@ NEXT=`date --date="${LAST} 1 week" +%Y-%m-%d`${SUFFIX}
 
 cp -vi skel/YYYY-MM-DD${SUFFIX} $SOURCE/$NEXT
 
+ln -fs $SOURCE/$NEXT latest.md
+
 $EDITOR $SOURCE/$NEXT
