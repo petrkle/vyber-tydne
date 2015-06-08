@@ -8,6 +8,9 @@ help:
 web:
 	bundle exec middleman build --clean
 
+server:
+	bundle exec middleman server
+
 install:
 	bundle install
 	./bin/install.sh
