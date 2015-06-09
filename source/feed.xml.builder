@@ -1,4 +1,5 @@
 xml.instruct!
+xml.instruct! 'xml-stylesheet', {:href => '/feed.xsl', :type => 'text/xsl'}
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   site_url = "http://vyber-tydne.kle.cz/"
   xml.title "Výběr týdne"
