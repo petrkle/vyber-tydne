@@ -1,6 +1,7 @@
 help:
 	@echo "help     - tato nápověda"
 	@echo "web      - vygeneruje web"
+	@echo "server   - spustí náhled webu"
 	@echo "next     - přidá šablonu na další týden"
 	@echo "test     - spustí testy"
 	@echo "install  - nainstaluje ruby závislosti a vytvoří odkaz na pre-commit script"
