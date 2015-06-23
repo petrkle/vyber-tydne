@@ -38,4 +38,13 @@ do
 		exit 1
 	fi
 
+	ODKAZY=`grep -e '(\(http\|https\)' $foo | wc -l`
+	NADPISY=`grep '^###' $foo | wc -l`
+	if [ $ODKAZY -ne $NADPISY ]
+	then
+		echo "$foo neobsahuje stejný počet odkazů a nadpisů"
+		exit 1
+	fi
+
+
 done
