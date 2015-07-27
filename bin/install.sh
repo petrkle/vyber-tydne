@@ -2,4 +2,6 @@
 
 set -e
 
-ln -s -f ../../bin/pre-commit .git/hooks/pre-commit
+ln -sf ../../bin/pre-commit .git/hooks/pre-commit
+
+ln -sf ../../bin/post-merge .git/hooks/post-merge
