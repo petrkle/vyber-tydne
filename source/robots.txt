@@ -1,4 +1,4 @@
 User-agent: * 
 Disallow:
 
-Sitemap: http://vyber-tydne.kle.cz/sitemap.xml
+Sitemap: https://vyber-tydne.kle.cz/sitemap.xml

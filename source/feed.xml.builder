@@ -1,7 +1,7 @@
 xml.instruct!
 xml.instruct! 'xml-stylesheet', {:href => '/feed.xsl', :type => 'text/xsl'}
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
-  site_url = "http://vyber-tydne.kle.cz/"
+  site_url = "https://vyber-tydne.kle.cz/"
   xml.title "Výběr týdne"
   xml.subtitle "Výběr týdne"
   xml.id URI.join(site_url, blog.options.prefix.to_s)
