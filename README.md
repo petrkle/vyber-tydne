@@ -20,4 +20,4 @@ Postup pro přidání odkazu, opravy a vylepšení:
 
 Kontakt
 =======
-http://petr.kle.cz
+https://petr.kle.cz
