@@ -48,3 +48,14 @@ do
 
 
 done
+
+D_URL=`grep '###' source/*.md | sed 's/.*(//;s/).*//;' | sort | uniq -c | grep -v '1 '`
+DUPLICITY=$?
+
+if [ $DUPLICITY -eq 0 ]
+ then
+	echo "Duplicitní url"
+	echo $D_URL
+	grep -l `echo $D_URL | awk '{print $2}'` source/*.md
+	exit 1
+fi
