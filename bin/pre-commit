@@ -46,13 +46,9 @@ do
 		exit 1
 	fi
 
-
 done
 
-D_URL=`grep '###' source/*.md | sed 's/.*(//;s/).*//;' | sort | uniq -c | grep -v '1 '`
-DUPLICITY=$?
-
-if [ $DUPLICITY -eq 0 ]
+if D_URL=`grep '###' source/*.md | sed 's/.*(//;s/).*//;' | sort | uniq -c | grep -v '1 '`
  then
 	echo "Duplicitní url"
 	echo $D_URL
