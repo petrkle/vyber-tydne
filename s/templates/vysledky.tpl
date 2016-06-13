@@ -1,4 +1,8 @@
+{$envelope.hlavicka}
 {foreach from=$vysledky key=cislo item=vysledek}
-<h3><a href="{$vysledek.url|escape}">{$vysledek.title|escape}</a></h3>
-<p>{$vysledek.content|escape}</p>
+<div class="vyber">
+<h2><a href="{$vysledek.url|escape}">{$vysledek.title|escape}</a></h2>
+<p>{$vysledek.content}</p>
+</div>
 {/foreach}
+{$envelope.paticka}
