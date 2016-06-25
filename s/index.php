@@ -6,6 +6,7 @@ $smarty->assign('envelope', getenvelope());
 
 if(isset($_GET['q'])){
 	$q = $_GET['q'];
+	$smarty->assign('q', $q);
 }else{
 	$smarty->display('index.tpl');
 	exit();
@@ -15,17 +16,18 @@ try {
 	$db = new PDO('mysql:host=127.0.0.1;port=9306;charset=utf8', '', '');
 } catch (PDOException $e) {
 	$smarty->assign('chyba', 'Dočasně mimo provoz');
+	header('Status: 503 Service Temporarily Unavailable');
 	$smarty->display('error.tpl');
 	exit();
 }
 
-if(strlen($q)<3){
+if(strlen($q)<2){
 	$smarty->assign('chyba', 'Zadejte prosím delší hledaný výraz.');
 	$smarty->display('error.tpl');
 	exit();
 }
 
-$sth = $db->prepare("SELECT url, title, content FROM vyber WHERE MATCH(:query)");
+$sth = $db->prepare("SELECT url, link_url, link_text, author, datum  FROM vyber WHERE MATCH(:query)");
 
 $sth->execute(array(':query' => $q));
 

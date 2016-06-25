@@ -18,6 +18,7 @@
 	.rss{padding:0 2em 0 15px;background:url("/img/rss.png") 0 50% no-repeat;}
 	.github{padding:0 2em 0 15px;background:url("/img/github.png") 0 50% no-repeat;}
 	.twitter{padding:0 0 0 15px;background:url("/img/twitter.png") 0 50% no-repeat;}
+	div.vyber form p{text-align:center;}
 }
 @media screen and (min-width: 40em){
 	h1 a{text-decoration:none;color:#000;font-size:2em;padding:1em 0;margin:0 auto 0 auto;display:block;background:#fd3;max-width:600px;border-bottom:solid 1px #333;}
