@@ -38,6 +38,12 @@ do
 		exit 1
 	fi
 
+	if egrep --quiet "(<|>)" $foo
+	then
+		echo "$foo obsahuje neescapované html značky"
+		exit 1
+	fi
+
 	ODKAZY=`grep -e '(\(http\|https\)' $foo | wc -l`
 	NADPISY=`grep '^###' $foo | wc -l`
 	if [ $ODKAZY -ne $NADPISY ]
