@@ -15,9 +15,8 @@
 	.nav li{display:inline-block;}
 	.nav li a{display:block;margin:0.5em;font-size:1.5em;}
 	.paticka{padding:1em 0;margin:0 auto 0 auto;background:#fd3;max-width:600px;}
-	.rss{padding:0 2em 0 15px;background:url("/img/rss.png") 0 50% no-repeat;}
-	.github{padding:0 2em 0 15px;background:url("/img/github.png") 0 50% no-repeat;}
-	.twitter{padding:0 0 0 15px;background:url("/img/twitter.png") 0 50% no-repeat;}
+	.rss{padding:1em;background:url("/img/rss.png") 0 50% no-repeat;}
+	.github{padding:1em;background:url("/img/github.png") 0 50% no-repeat;}
 	div.vyber form p{text-align:center;}
 }
 @media screen and (min-width: 40em){
