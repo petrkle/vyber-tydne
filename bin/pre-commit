@@ -6,7 +6,7 @@ LC_ALL=C
 
 for foo in source/*.md
 do
-	DATUM="`basename $foo '-vyber.md'`"
+	DATUM="`basename $foo '-vyber.html.md'`"
 
 	if [ "`date -d "$DATUM" +%a`" != "Fri" ]
 	then
@@ -54,10 +54,10 @@ do
 
 done
 
-if D_URL=`grep '###' source/*.md | sed 's/.*(//;s/).*//;' | sort | uniq -c | grep -v '1 '`
+if D_URL=`grep '###' source/*.html.md | sed 's/.*(//;s/).*//;' | sort | uniq -c | grep -v '1 '`
  then
 	echo "Duplicitní url"
 	echo $D_URL
-	grep -l `echo $D_URL | awk '{print $2}'` source/*.md
+	grep -l `echo $D_URL | awk '{print $2}'` source/*.html.md
 	exit 1
 fi
