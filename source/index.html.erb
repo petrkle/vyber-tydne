@@ -4,6 +4,7 @@ per_page: 5
 changefreq: weekly
 priority: 1
 ---
+
 <% page_articles.each_with_index do |article, i| %>
   <div class="vyber">
   <h2><%= link_to article.date.strftime('%-d. %-m. %Y'), article %></h2>
@@ -23,6 +24,6 @@ priority: 1
 		<li><%= link_to 'Starší &raquo;', next_page, :title => 'Starší výběry' %></li>
 	<% end %>
 
-</ul>
+	</ul>
 </div>
 <% end %>

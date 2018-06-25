@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~> 3.3.10"
-gem "middleman-blog", "~> 3.5.3"
+# Middleman Gems
+gem "middleman", "~> 4.1"
+gem "middleman-blog"
 gem "middleman-minify-html"
-gem "middleman-favicon-maker", "~> 3.7"
+gem "middleman-favicon-maker"
+
+# For feed.xml.builder
 gem "builder", "~> 3.0"
