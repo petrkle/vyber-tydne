@@ -2,6 +2,6 @@
 
 set -e
 
-LAST=`ls -1 source/*-vyber.md | sort -n | tail -1`
+LAST=`ls -1 source/*-vyber.html.md | sort -n | tail -1`
 
 ln -fs $LAST latest.md
