@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Middleman Gems
-gem "middleman", "~> 4.1"
+gem "middleman", "~> 4.3"
 gem "middleman-blog"
 gem "middleman-minify-html"
 gem "middleman-favicon-maker"
