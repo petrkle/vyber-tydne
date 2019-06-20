@@ -15,6 +15,7 @@ server:
 	bundle exec middleman server
 
 install:
+	gem install bundler -v 2.0.1
 	bundle install
 	./bin/install.sh
 
